@@ -1,0 +1,29 @@
+---
+layout: index
+title: index
+---
+
+{% for post in paginator.posts %}
+    <div class="card card-outline-success">
+      <div class="card-block">
+        <h3 class="card-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+            <p class="card-text">{{ post.excerpt }}</p>
+        <a href="{{ site.url }}{{ post.url }}" class="more"><i class="icon-link"></i></a>
+            <div class="card-footer text-muted"><i class="fa fa-clock-o" aria-hidden="true"></i> Date: {{ post.date | date_to_string }}</div>
+      </div>
+    </div>
+{% endfor %}
+{% if paginator.total_pages > 1 %}
+    <nav class="pagination fn-clear">
+        <span class="pagination-icon"><i class=" icon-copy"></i></span>
+        <ul class="pagination-list">
+            {% for page in (1..paginator.total_pages) %}
+                {% if page == paginator.page %}
+                    <li class="current"><a href="javascript:void(0);">{{ page }}</a></li>
+                {% else %}
+                    <li><a href="{{ site.url }}/{%if page > 1 %}page{{ page }}/{% endif %}">{{ page }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </nav>
+{% endif %}
