@@ -1,26 +1,38 @@
-# 基础设置
+# Site Config
 title: 空谷悠音-SuperWangCC的博客
+name: SuperWangCC
+site_name: 空谷悠音
 email: ddllkl@outlook.com
 description: 空谷悠音，轻飘云绕。环谷四山，尽皆传响。君若问我凌云之志，我答君曰势极雄豪。技术是我的理想，认真是我的态度，行动是理想和态度的结合，是成功之门，这就是我的人生观。
+# 分类（第一个用于文章标志，写在md头信息中）
+cate: [
+["study", "学习","/posts/study.html"], 
+["program", "程序猿笔记","/posts/program.html"],
+["sci", "泛科技","/posts/sci.html"], 
+["linux", "Linux技术","/posts/linux.html"],
+["book", "读书闲笔","/posts/read.html"], 
+["weekly", "老王周报","/posts/weekly.html"]
+]
+
+# Personal Config
 github: SuperWangCC
 github_description: Hello I'm SuperWangCC.A Chinese developer.
-
+weibo: SuperWangCC
 layouts_dir: ./_layouts
 future:   true
 timezone: Asia/Shanghai
-baseurl: ""  
-url: "https://www.coioidea.com" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "127.0.0.1:4000" # the base hostname & protocol for your site
 
 paginate: 7
 paginate_path: "posts/page:num"
 
 
-# 构建设置
+# Build settings
 markdown: kramdown
 highlighter: pygments
-theme: minima
 krandown:
   input: GFM
-excerpt_separator: "<!-- moremore -->"
+excerpt_separator: "<!-- moreandmore -->"
 gems:
 - jekyll-paginate

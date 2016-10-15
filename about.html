@@ -1,4 +1,37 @@
 ---
-layout: about
-title: about
+layout: default
+title: 关于我
 ---
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="jumbotron">
+        <h1 class="display-3">{{ site.title }}</h1>
+        <p class="lead">{{ site.description }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+        <div class="card card-inverse card-primary text-xs-center">
+        <div class="card-title">Github</div>
+        <div class="card-block">
+          <p class="card-text"> {{ site.github_description }} </p>
+          <a href="https://github.com/{{ site.github }}" class="btn btn-primary">Take a look</a>
+        </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card card-inverse card-primary text-xs-center">
+        <div class="card-title">Weibo</div>
+        <div class="card-block">
+          <p class="card-text"> {{ site.weibo_description }} </p>
+          <a href="https://github.com/{{ site.github }}" class="btn btn-primary">Take a look</a>
+        </div>
+        </div>
+      </div>
+    <div class="col-sm-4">
+      
+    </div>
+  </div>

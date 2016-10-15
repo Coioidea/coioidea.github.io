@@ -1,0 +1,10 @@
+<div class="card card-outline-secondary">
+  <div class="card-header">
+    文章分类
+  </div>
+  <div class="card-block">
+    {% for cat in site.cate %}
+	<a href="{{cat[2]}}"> {{cat[1]}} </a>
+    {% endfor %}
+  </div>
+</div>
