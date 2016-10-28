@@ -13,7 +13,8 @@ SuperWangCC's Blog
 3. 首页（80%）
 4. 美观优化（30%）
 5. 性能优化（10% 以上完成才会考虑）
-6. 评论以及统计功能(0%)
+6. 评论以及统计功能(50%)
 
+   `请使用自己的统计代码和评论代码`
 感谢[cdnjs](https://cdnjs.com/)提供的开放CDN加速。
 Powered by [Jekyll](http://jekyll.com.cn) and [GitHub Pages](https://pages.github.com)
