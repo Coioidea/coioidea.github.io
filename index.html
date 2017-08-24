@@ -4,13 +4,13 @@ title: 首页
 ---
 
 {% for post in paginator.posts %}
-    <div class="card card-outline-success">
-      <div class="card-block">
-        <h3 class="card-title"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+    <div class="card border-success">
+    <h3 class="card-header"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+    <div class="card-body">
             <p class="card-text">{{ post.excerpt }}</p>
-        <a href="{{ site.url }}{{ post.url }}" class="more"><i class="icon-link"></i></a>
+        <a href="{{ site.url }}{{ post.url }}" class="card-link"><i class="icon-link"></i>More</a>
         <div class="card-footer text-muted"> <i class="fa fa-clock-o" aria-hidden="true"></i> 日期： {{ post.date | date_to_string }}</div>
-      </div>
+    </div>
     </div>
 {% endfor %}
 {% if paginator.total_pages > 1 %}

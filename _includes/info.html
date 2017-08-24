@@ -1,11 +1,13 @@
-<div class="card card-outline-primary">
-  <div class="card-block">
-    <h4 class="card-title">{{ site.site_name }}</h4>
-    <h6 class="card-subtitle text-muted">{{ site.name }}'s Blog</h6>
-  </div>
-  <div class="card-block">
-    <p class="card-text">{{ site.description }}</p>
-    <a href="https://github.com/{{ site.github }}" class="card-link"><i class="fa fa-github" aria-hidden="true"></i>Github</a>
-    <a href="https://weibo.com/{{ site.weibo }}" class="card-link"><i class="fa fa-weibo" aria-hidden="true"></i>新浪微博</a>
-  </div>
+<div class="card border-primary">
+    <div class="card-header">{{ site.site_name }}</div>
+    <div class="card-body">
+      <h6 class="card-title">{{ site.name }}'s Blog</h6>
+      <p class="card-text">{{ site.description }}</p>
+      <div class="card-body">
+        <a href="https://github.com/{{ site.github }}" class="card-link"><i class="fa fa-github" aria-hidden="true"></i>Github</a>
+    	<a href="https://weibo.com/{{ site.weibo }}" class="card-link"><i class="fa fa-weibo" aria-hidden="true"></i>新浪微博</a>
+      </div>
+    </div>
 </div>
+
+
