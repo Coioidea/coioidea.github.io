@@ -1,17 +1,16 @@
 # Site Config
-title: 空谷悠音-SuperWangCC的博客
+title: 碳氧极思——进步的思想者
 name: SuperWangCC
-site_name: 空谷悠音
+site_name: 碳氧极思
 email: ddllkl@outlook.com
 description: 空谷悠音，轻飘云绕。环谷四山，尽皆传响。君若问我凌云之志，我答君曰势极雄豪。技术是我的理想，认真是我的态度，行动是理想和态度的结合，是成功之门，这就是我的人生观。
 # 分类（第一个用于文章标志，写在md头信息中）
-cate: [
+all_cate: [
 ["study", "学习","/posts/study.html"], 
-["program", "程序猿笔记","/posts/program.html"],
+["dev", "程序猿笔记","/posts/devel.html"],
 ["sci", "泛科技","/posts/sci.html"], 
-["linux", "Linux技术","/posts/linux.html"],
 ["book", "读书闲笔","/posts/read.html"], 
-["weekly", "老王周报","/posts/weekly.html"]
+["moe", "二次元","/posts/moe.html"]
 ]
 
 # Personal Config
@@ -24,7 +23,7 @@ timezone: Asia/Shanghai
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "127.0.0.1:4000" # the base hostname & protocol for your site
 
-paginate: 7
+paginate: 2
 paginate_path: "posts/page:num"
 
 
