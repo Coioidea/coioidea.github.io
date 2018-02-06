@@ -1,7 +1,7 @@
 
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #1e50a2">
-      <a class="navbar-brand" href="/index.html">{{ site.site_name}}</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="/index.html"><i class="fa fa-home"></i>{{ site.site_name}}</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
     	<span class="navbar-toggler-icon"></span>
   		</button>
   	<div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -10,18 +10,19 @@
 	  	  <li class="nav-item dropdown">
 	    	<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">学习</a>
 	    	<div class="dropdown-menu">
-	    	    {% for cat in site.cate %}
+	    	    {% for cat in site.all_cate %}
 	            <a class="dropdown-item" href="{{cat[2]}}"> {{cat[1]}} </a>
-                {% endfor %}
+            {% endfor %}
 	    	</div>
 	      </li>
       <a class="nav-link nav-item" href="/about.html">About</a>
+      <a class="nav-link nav-item" href="/tech.html">Tech</a>
       <a class="nav-link nav-item" href="https://wp.coioidea.com">WP blog</a>
       <a class="nav-item nav-link" href="http://www.coioidea.com/Manual">Doc</a>
 		</ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+      <input class="form-control mr-sm-2" type="text" id="search" placeholder="Search">
+      <button class="btn btn-outline-info my-2 my-sm-0" id="submit" type="submit"><i class="fa fa-search"></i></button>
     </form>
     </div>
     </nav>

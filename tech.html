@@ -1,0 +1,11 @@
+---
+layout: toolbox
+title: 首页
+---
+{% include header.html %}
+<h2>Online Markdown Editer Using Vue.js</h2>
+
+		<div id="editor">
+  			<textarea :value="input" @input="update"></textarea>
+  		<div v-html="compiledMarkdown"></div>
+		</div>

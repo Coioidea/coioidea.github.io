@@ -6,11 +6,11 @@ email: ddllkl@outlook.com
 description: 空谷悠音，轻飘云绕。环谷四山，尽皆传响。君若问我凌云之志，我答君曰势极雄豪。技术是我的理想，认真是我的态度，行动是理想和态度的结合，是成功之门，这就是我的人生观。
 # 分类（第一个用于文章标志，写在md头信息中）
 all_cate: [
-["study", "学习","/posts/study.html"], 
-["dev", "程序猿笔记","/posts/devel.html"],
-["sci", "泛科技","/posts/sci.html"], 
-["book", "读书闲笔","/posts/read.html"], 
-["moe", "二次元","/posts/moe.html"]
+["study", "学习","/post/study.html"], 
+["dev", "程序猿笔记","/post/devel.html"],
+["sci", "泛科技","/post/sci.html"], 
+["book", "读书闲笔","/post/read.html"], 
+["moe", "二次元","/post/moe.html"]
 ]
 
 # Personal Config
@@ -38,3 +38,5 @@ plugins:
 - jekyll-seo-tag
 - jemoji
 - jekyll-github-metadata
+- jekyll-redirect-from
+- jekyll-sitemap
