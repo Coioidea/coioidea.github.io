@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% for cat in site.all_cate %}{% if page.categories == cat[0] %}
+{% for cat in site.all_cate %}{% if page.categories contains cat[0] %}
 <ol class="breadcrumb">
   <li class="breadcrumb-item"><a href="/index.html">首页</a></li>
   <li class="breadcrumb-item"><a href="{{cat[2]}}">{{cat[1]}}</a></li>
@@ -11,9 +11,9 @@ layout: default
 {% endif %}{% endfor %}
 <h2>{{ page.title }}</h2>
 {% if page.tags.size > 0%}
-<b>标签：</b>{% for tag in page.tags %}{% if tag != "" %}<a href="/tags.html#{{ tag }}"><i>{{ tag }}</i></a>{% if forloop.index != page.tags.size %}, {% endif %}{% endif %}{% endfor %}{% endif %}
+<b><i class="fa fa-tag"></i>标签：</b>{% for tag in page.tags %}{% if tag != "" %}<a href="/tags.html#{{ tag }}"><i>{{ tag }}</i></a>{% if forloop.index != page.tags.size %}, {% endif %}{% endif %}{% endfor %}{% endif %}
 <div class="text-xs-right">
-<i class="fa fa-clock-o" aria-hidden="true"></i> 日期：{{ page.date | date_to_string}}
+<i class="fa fa-clock-o" aria-hidden="true"></i> 日期：{{ page.date | date:"%Y-%m-%d" }}
 </div>
 
 {{ content }}

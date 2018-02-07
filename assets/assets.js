@@ -1,19 +1,11 @@
+
 $(document).ready(function(){
+	var xml = ''
+	$.get("/atom.xml",function(data){
+    
+    });
+}
 
-  $("input[id=search]").change(function(){
-    var submit = $(this).val();
-    var $output = "";
-      if (submit != "") {
-        $.get(/feed.xml,function(data){
-          $(data).find('channel').find('item').each(function(index, ele){
-          var titles = $(ele).find('title').text();
-          var links = $(ele).find('link').text();
-
-      });
-      });
-  };
-});
-});
 
 new Vue({
   el: '#editor',
