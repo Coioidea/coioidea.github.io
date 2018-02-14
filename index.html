@@ -6,9 +6,9 @@ title: 首页
 {% for post in paginator.posts %}
     <div class="card border-success mb-3">
     <div class="card-header bg-transparent border-success">
-      <a href="{{ post.url }}" class="card-link">{{ post.title }}</a>
+      <a href="{{ post.url }}" class="card-link font-weight-bold">{{ post.title }}</a>
       <div class="float-sm-right">
-      {% if post.tags.size > 0%}<b class="mr-2"><i class="fa fa-tag"></i>标签:</b>
+      {% if post.tags.size > 0%}<i class="fa fa-tag"></i>标签:
       {% for tag in post.tags %}
       {% if tag != "" %}<span class="badge badge-pill badge-info mr-2">{{ tag }}</span>
       {% if forloop.index != post.tags.size %}{% endif %}{% endif %}{% endfor %}{% endif %}
