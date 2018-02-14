@@ -35,8 +35,5 @@ krandown:
 excerpt_separator: "<!-- moreandmore -->"
 plugins:
 - jekyll-paginate
-- jekyll-seo-tag
 - jemoji
-- jekyll-github-metadata
-- jekyll-redirect-from
-- jekyll-sitemap
+
