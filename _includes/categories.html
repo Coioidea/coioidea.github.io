@@ -1,10 +1,8 @@
 <div class="card">
-  <div class="card-header">
-    文章分类
-  </div>
   <div class="card-body">
+    <h5 class="card-title"><i class="fa fa-bookmark-o"></i> 文章分类</h5>
     {% for cat in site.all_cate %}
-	<a href="{{cat[2]}}" class="card-link"> {{cat[1]}} </a>
+	<a href="{{cat[2]}}" class="card-link mx-auto font-weight-bold"><i class="fa fa-tag"></i>{{cat[1]}} </a>
     {% endfor %}
   </div>
 </div>
