@@ -11,7 +11,7 @@
 	    	<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">分类</a>
 	    	<div class="dropdown-menu">
 	    	    {% for cat in site.all_cate %}
-	            <a class="dropdown-item" href="{{cat[2]}}"> {{cat[1]}} </a>
+	            <a class="dropdown-item" href="/category.html/#{{cat[0]}}"> {{cat[1]}} </a>
             {% endfor %}
 	    	</div>
 	      </li>

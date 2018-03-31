@@ -1,21 +1,22 @@
 # Site Config
 title: 碳氧极思——进步的思想者
-name: SuperWangCC
+name: Coioidea
 site_name: 碳氧极思
-email: ddllkl@outlook.com
+email: ddllkl#outlook.com
 description: 空谷悠音，轻飘云绕。环谷四山，尽皆传响。君若问我凌云之志，我答君曰势极雄豪。技术是我的理想，认真是我的态度，行动是理想和态度的结合，是成功之门，这就是我的人生观。
 # 分类（第一个用于文章标志，写在md头信息中）
 all_cate: [
-["study", "学习","/post/study.html"], 
-["dev", "程序猿笔记","/post/devel.html"],
-["sci", "泛科技","/post/sci.html"], 
-["book", "读书闲笔","/post/read.html"], 
-["moe", "二次元","/post/moe.html"]
+["study", "学习"],
+["dev", "程序猿笔记"],
+["sci", "泛科技"],
+["book", "读书闲笔"],
+["moe", "二次元"],
+["program","算法与竞赛"]
 ]
 
 # Personal Config
 github: SuperWangCC
-github_description: Hello I'm SuperWangCC.A Chinese developer.
+github_description: WangCC@Coioidea,一只学生coder党。
 weibo: SuperWangCC
 layouts_dir: ./_layouts
 future:   true
@@ -36,4 +37,3 @@ excerpt_separator: "<!-- moreandmore -->"
 plugins:
 - jekyll-paginate
 - jemoji
-

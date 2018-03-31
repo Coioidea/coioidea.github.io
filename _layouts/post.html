@@ -4,11 +4,12 @@ layout: default
 
 {% for cat in site.all_cate %}{% if page.categories contains cat[0] %}
 <ol class="breadcrumb">
-  <li class="breadcrumb-item"><a href="/index.html">首页</a></li>
-  <li class="breadcrumb-item"><a href="{{cat[2]}}">{{cat[1]}}</a></li>
+  <li class="breadcrumb-item"><a href="/index.html"><i class="fa fa-home"></i>首页</a></li>
+  <li class="breadcrumb-item"><a href="/category.html#{{cat[0]}}">{{cat[1]}}</a></li>
   <li class="breadcrumb-item active">{{ page.title }}</li>
 </ol>
 {% endif %}{% endfor %}
+
 <h2>{{ page.title }}</h2>
 {% if page.tags.size > 0%}
 <i class="fa fa-tag"></i>标签:{% for tag in page.tags %}{% if tag != "" %}<a href="/tags.html#{{ tag }}"><i>{{ tag }}</i></a>{% if forloop.index != page.tags.size %}, {% endif %}{% endif %}{% endfor %}{% endif %}
