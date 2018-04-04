@@ -3,6 +3,7 @@ layout: default
 ---
 
       {% for cat in site.all_cate %}
+      <br>
         <h3 class="font-weight-bold text-white d-inline-block p-2" style="background-color: #dc3023;"># {{ cat[1] }}</h4>
         <div class="list-group" id="{{ cat[0] }}">
           {% for post in site.posts %}{% if post.categories contains cat[0] %}

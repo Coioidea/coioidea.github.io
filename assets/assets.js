@@ -1,11 +1,20 @@
 
 $(document).ready(function(){
-	var xml = ''
-	$.get("/atom.xml",function(data){
-    
-    });
-}
+  $("#form").submit(function(getsubmit){
+    $.getJSON("/api.json",function(search){
+      for (var i = 0; i < Object.key(search).length; i++) {
+        while (smit) {
 
+        }
+      }
+    });
+  });
+});
+
+ function getsubmit(){
+   global smit = document.getElementsByID('form');
+   return smit;
+ }
 
 new Vue({
   el: '#editor',

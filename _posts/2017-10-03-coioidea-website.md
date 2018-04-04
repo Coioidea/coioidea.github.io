@@ -2,7 +2,7 @@
 layout: post
 title: "碳氧极思Coioidea今日开更"
 categories: dev
-tag: ["website","coioidea"]
+tags: ["website","coioidea"]
 ---
 
 将近半年断断续续的开发。我在GitHub上托管了 *碳氧极思Coioidea* 的正式网站建设完成。

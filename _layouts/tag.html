@@ -1,36 +1,23 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{{ page.title }} - {{ site.title }}</title>
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/assets/pygments.css">
-    <link rel="stylesheet" href="/assets/assets.css">
-    <style>body { padding-top: 70px; }</style>
-  </head>
-<body>
+---
+layout: default
+---
 
-{% include header.html %}
+{% for tag in site.tags %}
+    {% assign count = tag | last | size %}
+    {% assign fontsize = count | times: 4 %}
+    {% if count  > 2 %}
+    <a class="post-tags-item" href="{{ page.url }}?keyword={{ tag | first }}" title="{{ tag | first }}" data-count="{{ count }}" style="font-size: {% if fontsize > 24 %}24{% else %}{{ fontsize }}{% endif %}px">{{ tag | first }}</a>
+    {% endif %}
+{% endfor %}
 
-<div class="container">
-  {{ content }}
-</div>
-{% include footer.html %}
-  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdn.bootcss.com/popper.js/1.14.1/umd/popper.min.js"></script>
-  <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?b767f505b07273ad9ec2ff9abb3570ad";
-  var s = document.getElementsByTagName("script")[0];
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
-</body>
-</html>
+<table id="tags-table" style="display: none">
+    <thead>
+        <tr></tr>
+        <tr>
+          <th>日期</th>
+          <th>文章</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>

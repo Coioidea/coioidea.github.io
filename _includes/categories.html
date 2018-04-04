@@ -2,7 +2,7 @@
   <div class="card-body">
     <h5 class="card-title"><i class="fa fa-bookmark-o"></i> 文章分类</h5>
     {% for cat in site.all_cate %}
-	<a href="/category.html/#{{cat[0]}}" class="card-link mx-auto font-weight-bold"><i class="fa fa-tag"></i>{{cat[1]}} </a>
+  <button type="button" class="btn btn-secondary btn-sm justify-content-between"><i class="fa fa-tag"></i>{{cat[1]}} </button>
     {% endfor %}
   </div>
 </div>

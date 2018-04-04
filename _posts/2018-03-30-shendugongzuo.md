@@ -2,7 +2,7 @@
 layout: post
 title: "深度工作：充分使用每一份脑力"
 categories: study
-tag: ["学习","深度工作","效率"]
+tags: ["学习","深度工作","效率"]
 ---
 
 
