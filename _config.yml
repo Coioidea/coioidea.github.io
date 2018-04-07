@@ -24,7 +24,7 @@ timezone: Asia/Shanghai
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "127.0.0.1:4000" # the base hostname & protocol for your site
 
-paginate: 2
+paginate: 5
 paginate_path: "posts/page:num"
 
 

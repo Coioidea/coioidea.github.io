@@ -1,6 +1,6 @@
 
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #1e50a2">
-      <a class="navbar-brand" href="/index.html"><i class="fa fa-home"></i>{{ site.site_name}}</a>
+      <a class="navbar-brand" href="/index.html"><i class="fa fa-empire"></i>{{ site.site_name}}</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
     	<span class="navbar-toggler-icon"></span>
   		</button>
@@ -11,7 +11,7 @@
 	    	<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">分类</a>
 	    	<div class="dropdown-menu">
 	    	    {% for cat in site.all_cate %}
-	            <a class="dropdown-item" href="/category.html/#{{cat[0]}}"> {{cat[1]}} </a>
+	            <a class="dropdown-item" href="/category.html#{{cat[0]}}"> {{cat[1]}} </a>
             {% endfor %}
 	    	</div>
 	      </li>
