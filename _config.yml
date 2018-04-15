@@ -10,7 +10,7 @@ all_cate: [
 ["dev", "程序猿笔记"],
 ["sci", "泛科技"],
 ["book", "读书闲笔"],
-["moe", "二次元"],
+["acg", "二次元"],
 ["program","算法与竞赛"]
 ]
 
@@ -30,7 +30,7 @@ paginate_path: "posts/page:num"
 
 # Build settings
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 krandown:
   input: GFM
 excerpt_separator: "<!-- moreandmore -->"
