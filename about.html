@@ -1,6 +1,6 @@
 ---
-layout: default
-title: 关于我
+layout: about
+title: 关于
 ---
 
 <div class="container">
@@ -14,24 +14,28 @@ title: 关于我
   </div>
   <div class="row">
     <div class="col-sm-4">
-        <div class="card card-inverse card-primary text-xs-center">
-        <div class="card-title">Github</div>
-        <div class="card-block">
+        <div class="card text-light bg-dark text-xs-center">
+        <div class="card-body">
+          <h5 class="card-title">Github</h5>
           <p class="card-text"> {{ site.github_description }} </p>
           <a href="https://github.com/{{ site.github }}" class="btn btn-primary">Take a look</a>
         </div>
         </div>
     </div>
+
     <div class="col-sm-4">
-      <div class="card card-inverse card-primary text-xs-center">
-        <div class="card-title">Weibo</div>
-        <div class="card-block">
+      <span class="d-block p-2 bg-dark text-white text-center">{{ site.title }}</span>
+        <img class="rounded mx-auto d-block" style="height: 250px;" src="/assets/donut.svg" alt="Coioidea Logo">
+    </div>
+
+    <div class="col-sm-4">
+      <div class="card text-light bg-dark text-xs-center">
+        <div class="card-body">
+          <h5 class="card-title">Weibo</h5>
           <p class="card-text"> {{ site.weibo_description }} </p>
           <a href="https://github.com/{{ site.github }}" class="btn btn-primary">Take a look</a>
         </div>
         </div>
       </div>
-    <div class="col-sm-4">
-      
-    </div>
+
   </div>
