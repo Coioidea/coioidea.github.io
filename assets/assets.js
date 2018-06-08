@@ -1,34 +1,26 @@
 
 $(document).ready(function(){
+  getHitokoto();
+  bgImg();
   $("#form").submit(function(getsubmit){
-    $.getJSON("/api.json",function(search){
-      for (var i = 0; i < Object.key(search).length; i++) {
-        while (smit) {
+    $.getJSON("api.json",function(search){
 
-        }
-      }
+
     });
   });
 });
 
- function getsubmit(){
-   global smit = document.getElementsByID('form');
-   return smit;
- }
-
-new Vue({
-  el: '#editor',
-  data: {
-    input: '# hello'
-  },
-  computed: {
-    compiledMarkdown: function () {
-      return marked(this.input, { sanitize: true })
+    function getHitokoto() {
+        $.getJSON("https://api.imjad.cn/hitokoto/?charset=utf-8&encode=json", function(data) {
+            $("#hitokoto").html('<p class="bg-success rounded shadow-sm"> >'+data.hitokoto+"</p>");
+        });
     }
-  },
-  methods: {
-    update: _.debounce(function (e) {
-      this.input = e.target.value
-    }, 300)
-  }
-})
+    function bgImg(){
+        $.getJSON("assets/bg.json",function(bg){
+          var count = Object.keys(bg).length;
+          var num = Math.floor((Math.random()*count)+1);
+          var url = bg[num];
+          $("body").css("background-image",'url("'+url+'")');
+          console.log(url);
+        });
+    }
