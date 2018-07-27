@@ -15,7 +15,7 @@ title: 首页
       </div>
     </div>
     <div class="card-body">
-        <p class="card-text">{{ post.excerpt }}</p>
+        <p class="card-text">{{ post.excerpt | strip_html}}</p>
  	  </div>
  	  <div class="card-footer bg-transparent border-success"><i class="fa fa-clock-o"></i><small class="text-muted">{{ post.date | date:"%Y年%m月%d日" }}</small>
         <a href="{{ post.url }}" class="float-sm-right card-link text-white bg-dark">继续阅读 <i class="fa fa-arrow-circle-right"></i></a>

@@ -17,6 +17,23 @@ layout: default
   <i class="fa fa-clock-o"></i> 日期：{{ page.date | date:"%Y-%m-%d" }}
   </div>
 </div>
-
 <hr>
-{{ content }}
+
+<div class="card markdown-body" id="post">
+  <div class="card-body">
+    {{ content }}
+  </div>
+</div>
+<div id="gitalk-container"></div>
+<script>
+  var gitalk = new Gitalk({
+  clientID: `7199df80e52dd19bcc79`,
+  clientSecret: `dc1d37723dcc52aa9459ad23f5baf42cf440b1d1`,
+  repo: `SuperWangCC.github.io`,
+  owner: 'SuperWangCC',
+  admin: ['SuperWangCC'],
+  id: '{{ page.id }}',
+  
+  });
+  gitalk.render('gitalk-container');
+</script> 
