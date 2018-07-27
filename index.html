@@ -22,44 +22,46 @@ title: 首页
     </div>
     </div>
 {% endfor %}
-{% if paginator.total_pages > 1 %}
-<nav>
-<ul class="pagination">
-  {% if paginator.previous_page %}
-  	<li class="page-item">
-      <a class="page-link" href="{{ paginator.previous_page_path| replace: '//', '/' }}" tabindex="-1"><i class="fa fa-angle-left"></i>上一页</a>
-    </li>
-  {% else %}
-  	<li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1"><i class="fa fa-angle-left"></i>上一页</a>
-    </li>
-  {% endif %}
-
-  {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-    	<li class="page-item active">
-      	<span class="page-link">{{ page }}</span>
-    	</li>
-    {% elsif page == 1 %}
-        <li class="page-item">
-      	<a class="page-link" href="{{ '/index.html' | replace: '//', '/' }}">{{ page }}</a>
-    	</li>
-    {% else %}
-        <li class="page-item">
-      	<a class="page-link" href="{{ site.paginate_path | prepend: '/' | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-    	</li>
+  <div class="col align-self-center">
+    {% if paginator.total_pages > 1 %}
+    <nav>
+    <ul class="pagination">
+      {% if paginator.previous_page %}
+      	<li class="page-item">
+          <a class="page-link" href="{{ paginator.previous_page_path| replace: '//', '/' }}" tabindex="-1"><i class="fa fa-angle-left"></i>上一页</a>
+        </li>
+      {% else %}
+      	<li class="page-item disabled">
+          <a class="page-link" href="#" tabindex="-1"><i class="fa fa-angle-left"></i>上一页</a>
+        </li>
+      {% endif %}
+      
+      {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+        	<li class="page-item active">
+          	<span class="page-link">{{ page }}</span>
+        	</li>
+        {% elsif page == 1 %}
+            <li class="page-item">
+          	<a class="page-link" href="{{ '/index.html' | replace: '//', '/' }}">{{ page }}</a>
+        	</li>
+        {% else %}
+            <li class="page-item">
+          	<a class="page-link" href="{{ site.paginate_path | prepend: '/' | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+        	</li>
+        {% endif %}
+      {% endfor %}
+        
+      {% if paginator.next_page %}
+      	<li class="page-item">
+          <a class="page-link" href="{{ paginator.next_page_path | prepend: '/' | replace: '//', '/' }}" tabindex="-1">下一页<i class="fa     fa-angle-right"></i></a>
+        </li>
+      {% else %}
+      	<li class="page-item disabled">
+          <a class="page-link" href="#" tabindex="-1"><i class="fa fa-angle-right"></i>下一页</a>
+        </li>
+      {% endif %}
+    </ul>
+    </nav>
     {% endif %}
-  {% endfor %}
-
-  {% if paginator.next_page %}
-  	<li class="page-item">
-      <a class="page-link" href="{{ paginator.next_page_path | prepend: '/' | replace: '//', '/' }}" tabindex="-1">下一页<i class="fa fa-angle-right"></i></a>
-    </li>
-  {% else %}
-  	<li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1"><i class="fa fa-angle-right"></i>下一页</a>
-    </li>
-  {% endif %}
-</ul>
-</nav>
-{% endif %}
+  </div>

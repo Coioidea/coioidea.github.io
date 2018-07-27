@@ -10,7 +10,7 @@ layout: default
 </ol>
 {% endif %}{% endfor %}
 <div class="alert alert-success">
-  <h2 class="alert-heading">{{ page.title }}</h2>
+  <h3 class="alert-heading">{{ page.title }}</h3>
   {% if page.tags.size > 0%}
   <i class="fa fa-tag"></i> 标签： {% for tag in page.tags %}{% if tag != "" %}<a href="/tag.html/{{ tag }}" class="badge badge-pill badge-info mr-2">{{ tag }}</a>{% if forloop.index != page.tags.size %} {% endif %}{% endif %}{% endfor %}{% endif %}
   <div class="float-sm-right">
