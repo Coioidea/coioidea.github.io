@@ -3,12 +3,6 @@ $(document).ready(function(){
   getHitokoto();
   bgImg();
   image();
-  $("#form").submit(function(getsubmit){
-    $.getJSON("/api.json",function(search){
-
-
-    });
-  });
 });
 
     function getHitokoto() {
@@ -17,13 +11,13 @@ $(document).ready(function(){
         });
     }
     function bgImg(){
-        $.getJSON("/assets/bg.json",function(bg){
+        bginfo='{"1":"http://datast.qiniudn.com/20180608/be098f4a5a77c320.jpg","2" :"http://datast.qiniudn.com/20180608/665632114303e2af.jpg","3":"http://datast.qiniudn.com/20180608/ff4bb44b62603797.jpg"}'
+        var bg = JSON.parse(bginfo);
           var count = Object.keys(bg).length;
           var num = Math.floor((Math.random()*count)+1);
           var url = bg[num];
           $("body").css("background-image",'url("'+url+'")');
-        });
     }
-function image(){
+    function image(){
     $("#post").find("img").addClass("img-fluid");
-}
+    }
