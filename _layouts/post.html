@@ -6,21 +6,28 @@ layout: default
 <ol class="breadcrumb">
   <li class="breadcrumb-item"><a href="/index.html"><i class="fa fa-home"></i>首页</a></li>
   <li class="breadcrumb-item"><a href="/category.html#{{cat[0]}}">{{cat[1]}}</a></li>
-  <li class="breadcrumb-item active">{{ page.title }}</li>
+  <li class="breadcrumb-item active">文章</li>
 </ol>
 {% endif %}{% endfor %}
 <div class="alert alert-success">
   <h3 class="alert-heading">{{ page.title }}</h3>
   {% if page.tags.size > 0%}
-  <i class="fa fa-tag"></i> 标签： {% for tag in page.tags %}{% if tag != "" %}<a href="/tag.html/{{ tag }}" class="badge badge-pill badge-info mr-2">{{ tag }}</a>{% if forloop.index != page.tags.size %} {% endif %}{% endif %}{% endfor %}{% endif %}
+  <i class="fa fa-tag"></i>  {% for tag in page.tags %}{% if tag != "" %}<a href="/tag.html/{{ tag }}" class="badge badge-pill badge-info mr-2">{{ tag }}</a>{% if forloop.index != page.tags.size %} {% endif %}{% endif %}{% endfor %}{% endif %}
   <div class="float-sm-right">
-  <i class="fa fa-clock-o"></i> 日期：{{ page.date | date:"%Y-%m-%d" }}
+  <i class="fa fa-clock-o"></i> {{ page.date | date:"%Y-%m-%d" }}
   </div>
 </div>
 <hr>
 
-<div class="card markdown-body" id="post">
+<div class="card markdown-body shadow" id="post">
   <div class="card-body">
+      {% capture postdate %}{{ page.date | date:"%s" }}{% endcapture %}
+      {% capture sitedate %}{{ site.time | date:"%s" }}{% endcapture %}
+      {% capture delta %}{{ sitedate | minus: postdate }}{% endcapture %}
+      {% if delta > 7776000 %}
+      <div class="alert alert-primary"><i class="fa fa-exclamation-triangle"></i>请注意，本文最后修改于 {{ delta | divided_by: 86400 | ceil }} 天前，其中某些信息可能已经过时。</div>
+      <hr>
+      {% endif %}
     {{ content }}
   </div>
 </div>
