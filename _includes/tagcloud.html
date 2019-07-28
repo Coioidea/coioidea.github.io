@@ -1,0 +1,12 @@
+<div class="d-flex flex-wrap">
+    
+        {% capture tags %}
+        {% for tag in site.tags %}{% if tag[1].size > 1 %}
+                <a data-sort="{{ site.posts.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}" 
+                    href="{{ site.baseurl }}/tag.html#{{ tag[0] | url_encode }}"
+                    title="{{ tag[0] }}"
+                    rel="{{ tag[1].size }}" class="p-2 badge badge-dark">{{ tag[0] }}</a>
+        {% endif %}{% endfor %}
+        {% endcapture %}
+        {{ tags | split:'</a>' | sort | join:'</a> ' }}
+</div>
