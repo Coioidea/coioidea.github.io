@@ -3,9 +3,30 @@ layout: default
 title: 标签
 ---
 
+<div class="row bg-light">
+    <div class="col-4">
+      <div class="list-group" role="tablist">
+            {% for tag in site.tags %}
+            <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#{{ tag[0] }}" role="tab">{{ tag[0] }}</a>
+            {% endfor %}
+       </div>
+    </div>
+    <div class="col-8">
+      <div class="tab-content">
+            {% for tag in site.tags %}
+                <div class="tab-pane fade show" id="{{ tag[0] }}">
+                {% for post in tag[1] %}
+                <span class="border border-white"><a class="tag-post" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></span>
+                {% endfor %}
+                </div>
+            {% endfor%}
+      </div>
+    </div>
+</div>
+
 <ul class="tags-list">
     <li>
-    {% if site.tags.size>0 %}
+    {% if site.tags.size > 0 %}
         {% for tag in site.tags %}
         <a href="#{{ tag[0] }}" class="tag">{{ tag[0]}}</a>
         {% endfor %}

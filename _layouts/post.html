@@ -23,7 +23,7 @@ layout: default
   <div class="card-body">
       {% capture postdate %}{{ page.date | date:"%s" }}{% endcapture %}
       {% capture sitedate %}{{ site.time | date:"%s" }}{% endcapture %}
-      {% capture delta %}{{ sitedate | minus: postdate }}{% endcapture %}
+      {% assign delta = sitedate | minus: postdate | ceil %}
       {% if delta > 7776000 %}
       <div class="alert alert-primary"><i class="fa fa-exclamation-triangle"></i>请注意，本文最后修改于 {{ delta | divided_by: 86400 | ceil }} 天前，其中某些信息可能已经过时。</div>
       <hr>
