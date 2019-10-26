@@ -1,26 +1,26 @@
 ---
 layout: default
 ---
-
-{% for cat in site.all_cate %}{% if page.categories contains cat[0] %}
-<ol class="breadcrumb">
-  <li class="breadcrumb-item"><a href="/index.html"><i class="fa fa-home"></i>首页</a></li>
-  <li class="breadcrumb-item"><a href="/category.html#{{cat[0]}}">{{cat[1]}}</a></li>
-  <li class="breadcrumb-item active">文章</li>
-</ol>
-{% endif %}{% endfor %}
-<div class="alert alert-success">
-  <h3 class="alert-heading">{{ page.title }}</h3>
-  {% if page.tags.size > 0%}<i class="fa fa-tag"></i>{% for tag in page.tags %}{% if tag != "" %}<a href="/tag.html/#{{ tag }}" class="badge badge-pill badge-info mr-2">{{ tag }}</a>{% if forloop.index != page.tags.size %} {% endif %}{% endif %}{% endfor %}{% endif %}
-  <p class="float-sm-right"><i class="fa fa-clock-o"></i> {{ page.date | date:"%Y-%m-%d" }}</p>
-</div>
-<hr>
-<div class="card markdown-body shadow" id="post">
-  <div class="card-body">{% capture postdate %}{{ page.date | date:"%s" }}{% endcapture %}{% capture sitedate %}{{ site.time | date:"%s" }}{% endcapture %}{% assign delta = sitedate | minus: postdate | ceil %}
-      {% if delta > 7776000 %}<div class="p-3 mb-2 bg-warning text-dark"><i class="fa fa-exclamation-triangle"></i>请注意，本文最后修改于 {{ delta | divided_by: 86400 | ceil }} 天前，其中某些信息可能已经过时。</div>
-      <hr>{% endif %}
-    {{ content }}
-  </div>
-</div>
-<div id="comments"></div>
-
+      {% for cat in site.all_cate %}{% if page.categories contains cat[0] %}
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/index.html"><i class="fa fa-home"></i>首页</a></li>
+        <li class="breadcrumb-item"><a href="/category.html#{{cat[0]}}">{{cat[1]}}</a></li>
+        <li class="breadcrumb-item active">文章</li>
+      </ol>
+      {% endif %}{% endfor %}
+      <div class="alert alert-success">
+        <h3 class="alert-heading">{{ page.title }}</h3>
+        {% if page.tags.size > 0%}<i class="fa fa-tag"></i>{% for tag in page.tags %}{% if tag != "" %}<a href="/tag.html/#{{ tag }}" class="badge badge-pill badge-info mr-2">{{ tag }}</a>{% if forloop.index != page.tags.size %} {% endif %}{% endif %}{% endfor %}{% endif %}
+        <p class="float-sm-right"><i class="fa fa-clock-o"></i> {{ page.date | date:"%Y-%m-%d" }}</p>
+      </div>
+      <hr>
+      <div class="card markdown-body shadow" id="post">
+        {% if page.img != "" %}<img src="{{ page.img }}" class="card-img-top">{% endif %}
+        <div class="card-body">{% capture postdate %}{{ page.date | date:"%s" }}{% endcapture %}{% capture sitedate %}{{ site.time | date:"%s" }}{% endcapture %}{% assign delta = sitedate | minus: postdate | ceil %}
+            {% if delta > 7776000 %}<P class="bg-warning text-dark"><i class="fa fa-exclamation-triangle"></i>请注意，本文最后修改于 {{ delta | divided_by: 86400 | ceil }} 天前，其中某些信息可能已经过时。</p>
+            <hr>{% endif %}
+          {{ content }}
+        </div>
+      </div>
+      
+      <div style="background-color: #ffadade1;" id="comments"></div>

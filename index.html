@@ -19,8 +19,8 @@ title: 首页
     </div>{% endfor %}
 
   <div class="col">{% if paginator.total_pages > 1 %}
-    <nav style="background-color:#fcfcfcad">
-    <ul class="pagination justify-content-center">
+    <nav>
+    <ul class="pagination justify-content-center" style="background-color:#fcfcfcad">
       {% if paginator.previous_page %}<li class="page-item">
           <a class="page-link" href="{{ paginator.previous_page_path| replace: '//', '/' }}" tabindex="-1"><i class="fa fa-angle-left"></i>上一页</a>
         </li>{% else %}

@@ -13,26 +13,24 @@
     <style>body { padding-top: 60px; }</style>
   </head>
 <body>
-
 {% include header.html %}
-
 <div class="container">
   <div class="row">
-    <div class="col-sm-12 col-md-9">
-      {{ content }}
+    <div class="col-sm-12 col-md-9">{{ content }}
       <hr>
     </div>
-
     <div class="col-sm-12 col-md-3">
       {% include info.html %}
       {% include categories.html %}
       {% include tagcloud.html %}
     </div>
-
   </div>
 </div>
 {% include footer.html %}
   <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3/dist/jquery.min.js,npm/popper.js@1,npm/bootstrap@4/dist/js/bootstrap.min.js,npm/katex@0.10.0,npm/katex@0.10.0/dist/contrib/auto-render.min.js,npm/gitalk@1"></script>
   <script src="/assets/assets.js"></script>
+  <script>
+    const gitalk = new Gitalk({clientID: `7199df80e52dd19bcc79`,clientSecret: `dc1d37723dcc52aa9459ad23f5baf42cf440b1d1`,repo: `SuperWangCC.github.io`,owner: 'SuperWangCC',admin: ['SuperWangCC'],id: '{{ page.id }}',distractionFreeMode: false});
+    gitalk.render('comments');</script>
 </body>
 </html>
