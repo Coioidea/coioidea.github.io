@@ -1,4 +1,6 @@
 'use strict';
+const gitalk = new Gitalk({clientID: `7199df80e52dd19bcc79`,clientSecret: `dc1d37723dcc52aa9459ad23f5baf42cf440b1d1`,repo: `SuperWangCC.github.io`,owner: 'SuperWangCC',admin: ['SuperWangCC'],id: '{{ page.id }}',distractionFreeMode: false});
+gitalk.render('comments');
 $(document).ready(function(){
   getHitokoto();
   bgImg();

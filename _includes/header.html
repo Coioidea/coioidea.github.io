@@ -1,5 +1,5 @@
 
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #253670b7">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #3fa79ed0">
       <a class="navbar-brand" href="/index.html"><i class="fa fa-empire"></i>{{ site.site_name}}</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
     	<span class="navbar-toggler-icon"></span>
@@ -10,9 +10,7 @@
 	  	  <li class="nav-item dropdown">
 	    	<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-briefcase"></i>分类</a>
 	    	<div class="dropdown-menu">
-	    	    {% for cat in site.all_cate %}
-	            <a class="dropdown-item" href="/category.html#{{cat[0]}}"> {{cat[1]}} </a>
-            {% endfor %}
+	    	    {% for cat in site.all_cate %}<a class="dropdown-item" href="/category.html#{{cat[0]}}"> {{cat[1]}} </a>{% endfor %}
 	    	</div>
 	      </li>
       <a class="nav-link nav-item" href="/about.html"><i class="fa fa-at"></i>关于</a>
@@ -21,7 +19,7 @@
       <a class="nav-link nav-item" href="https://www.coioidea.com/Manual"><i class="fa fa-microchip"></i>开发文档</a>
 		</ul>
     <form class="form-inline my-2 my-lg-0" id="form">
-      <input class="form-control mr-sm-2" type="text" placeholder="搜点什么吧">
+      <input class="form-control mr-sm-2" type="text" placeholder="OwO">
       <button class="btn btn-outline-info my-2 my-sm-0" id="search" type="button" data-toggle="modal" data-target="#searchmodal"><i class="fa fa-search"></i></button>
     </form>
     </div>
