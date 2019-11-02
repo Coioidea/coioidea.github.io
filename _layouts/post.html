@@ -10,7 +10,7 @@ layout: default
       {% endif %}{% endfor %}
       <div class="alert alert-success">
         <h3 class="alert-heading">{{ page.title }}</h3>
-        {% if page.tags.size > 0%}<i class="fa fa-tag"></i>{% for tag in page.tags %}{% if tag != "" %}<a href="/tag.html/#{{ tag }}" class="badge badge-pill badge-info mr-2">{{ tag }}</a>{% if forloop.index != page.tags.size %} {% endif %}{% endif %}{% endfor %}{% endif %}
+        {% if page.tags.size > 0%}<i class="fa fa-tag"></i>{% for tag in page.tags %}{% if tag != "" %}<a href="/tag.html#{{ tag }}" class="badge badge-pill badge-info mr-2">{{ tag }}</a>{% if forloop.index != page.tags.size %} {% endif %}{% endif %}{% endfor %}{% endif %}
         <p class="float-sm-right"><i class="fa fa-clock-o"></i> {{ page.date | date:"%Y-%m-%d" }}</p>
       </div>
       <hr>
@@ -22,5 +22,5 @@ layout: default
           {{ content }}
         </div>
       </div>
-      
-      <div style="background-color: #ffadade1;" id="comments"></div>
+
+      <div class="d-flex p-2" style="background-color: #5a5a5a69;" id="comments"></div>

@@ -21,12 +21,10 @@ $(document).ready(function(){
           var num = Math.floor((Math.random()*count)+1);
           var url = bg[num];
           $("body").css("background-image",'url("'+url+'")');
+          $(".").
     }
     function image(){
     $("#post").find("img").addClass("img-fluid");
-    }
-    function colorpatt(){
-
     }
     function Search() {
         var self = this;
