@@ -1,16 +1,15 @@
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #3fa79eea">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #29948bea">
       <a class="navbar-brand" href="/index.html"><i class="fa fa-empire"></i>{{ site.site_name}}</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
+        <button class="navbar-toggler" type="button">
     	<span class="navbar-toggler-icon"></span>
   		</button>
   	<div class="collapse navbar-collapse" id="navbarNavDropdown">
 	  	<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 		  <a class="nav-item nav-link" href="/index.html"><i class="fa fa-home"></i>主页</a>
 	  	  <li class="nav-item dropdown">
-	    	<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-briefcase"></i>分类</a>
+	    	<a class="nav-link dropdown-toggle" href="#"><i class="fa fa-briefcase"></i>分类</a>
 	    	<div class="dropdown-menu">
-            {% for cat in site.all_cate %}
-            <a class="dropdown-item" href="/category.html#{{cat[0]}}"> {{cat[1]}} </a>{% endfor %}
+            {% for cat in site.all_cate %}<a class="dropdown-item" href="/category.html#{{cat[0]}}"> {{cat[1]}} </a>{% endfor %}
 	    	</div>
 	      </li>
       <a class="nav-link nav-item" href="/about.html"><i class="fa fa-at"></i>关于</a>

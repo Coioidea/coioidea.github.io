@@ -10,17 +10,16 @@ layout: default
       {% endif %}{% endfor %}
       <div class="alert alert-success">
         <h3 class="alert-heading">{{ page.title }}</h3>
-        {% if page.tags.size > 0%}<i class="fa fa-tag"></i>{% for tag in page.tags %}{% if tag != "" %}<a href="/tag.html#{{ tag }}" class="badge badge-pill badge-info mr-2">{{ tag }}</a>{% if forloop.index != page.tags.size %} {% endif %}{% endif %}{% endfor %}{% endif %}
+        {% if page.tags.size > 0%}<i class="fa fa-tag"></i>{% for tag in page.tags %}{% if tag != "" %}<a href="/tag.html#{{ tag }}" class="badge badge-pill badge-info mr-2">{{ tag }}</a>{% if forloop.index != page.tags.size %}{% endif %}{% endif %}{% endfor %}{% endif %}
         <p class="float-sm-right"><i class="fa fa-clock-o"></i> {{ page.date | date:"%Y-%m-%d" }}</p>
       </div>
       <hr>
       <div class="card markdown-body shadow" id="post">
         {% if page.img != "" %}<img src="{{ page.img }}" class="card-img-top">{% endif %}
         <div class="card-body">{% capture postdate %}{{ page.date | date:"%s" }}{% endcapture %}{% capture sitedate %}{{ site.time | date:"%s" }}{% endcapture %}{% assign delta = sitedate | minus: postdate | ceil %}
-            {% if delta > 7776000 %}<P class="bg-warning text-dark"><i class="fa fa-exclamation-triangle"></i>请注意，本文最后修改于 {{ delta | divided_by: 86400 | ceil }} 天前，其中某些信息可能已经过时。</p>
-            <hr>{% endif %}
           {{ content }}
+        {% if delta > 7776000 %}<p class="bg-warning text-dark"><i class="fa fa-exclamation-triangle"></i>请注意，本文最后修改于 {{ delta | divided_by: 86400 | ceil }} 天前，其中某些信息可能已经过时。</p>{% endif %}
         </div>
       </div>
 
-      <div class="d-flex p-2" style="background-color: #5a5a5a69;" id="comments"></div>
+      <div class="d-flex mx-auto" style="background-color: #44444469;" id="comments"></div>
