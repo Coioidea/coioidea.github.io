@@ -10,7 +10,26 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/bootstrap@4/dist/css/bootstrap.min.css,npm/gitalk@1/dist/gitalk.min.css,npm/github-markdown-css@2.10.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/assets/assets.css">
-    <style>body { padding-top: 60px; }</style>
+    <style>
+body { padding-top: 60px; 
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+  filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+  -webkit-filter: grayscale(1);
+}
+
+@media only screen and (min-width: 768px) {
+  .page-web-index {
+    min-width: 1200px;
+    overflow-x: hidden !important;
+  }
+}
+
+    </style>
   </head>
 <body>
 {% include header.html %}
@@ -27,7 +46,8 @@
   </div>
 </div>
 {% include footer.html %}
-  <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3/dist/jquery.min.js,npm/popper.js@1,npm/bootstrap@4/dist/js/bootstrap.min.js,npm/katex@0.10.0,npm/katex@0.10.0/dist/contrib/auto-render.min.js,npm/gitalk@1"></script>
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3/dist/jquery.min.js,npm/popper.js@1,npm/bootstrap@4/dist/js/bootstrap.min.js,npm/katex@0.10.0,npm/katex@0.10.0/dist/contrib/auto-render.min.js"></script>
   <script src="/assets/assets.js"></script>
   <script>
     const gitalk = new Gitalk({clientID: `7199df80e52dd19bcc79`,clientSecret: `dc1d37723dcc52aa9459ad23f5baf42cf440b1d1`,repo: `SuperWangCC.github.io`,owner: 'SuperWangCC',admin: ['SuperWangCC'],id: '{{ page.id }}',distractionFreeMode: false});
